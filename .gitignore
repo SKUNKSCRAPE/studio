@@ -1,0 +1,204 @@
+
+# === SkunkScrape .gitignore ===
+# Purpose: keep the repo lean; ignore build artifacts, caches, local data, and secrets.
+
+# -----------------------------
+# OS junk
+# -----------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+$RECYCLE.BIN/
+
+# -----------------------------
+# Python caches & builds
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+.python-version
+
+# Packaging / build artifacts
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+pip-log.txt
+
+# Test & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.pytype/
+
+# -----------------------------
+# Virtual environments
+# -----------------------------
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# -----------------------------
+# Logs & runtime output
+# -----------------------------
+logs/
+*.log
+*.tmp
+tmp/
+temp/
+out/
+output/
+exports/
+reports/
+
+# -----------------------------
+# Project data (keep samples / docs)
+# -----------------------------
+data/**
+!data/*.example
+!data/*.sample
+!data/*.template
+!data/README.md
+!data/**/README.md
+
+# Known subfolders often created by scrapers
+data/logs/
+data/cache/
+data/seeds/
+data/proxies/
+data/downloads/
+data/out/
+
+# -----------------------------
+# Proxies & credentials (prefer to keep ONLY examples)
+# -----------------------------
+*.key
+*.pem
+*.crt
+*.pfx
+*.p12
+*.der
+*.csr
+*.keystore
+*.jks
+*.sqlite
+*.db
+*.sqlite3
+*.mdb
+*.accdb
+*.bak
+*.old
+*.orig
+*.secret
+*.credentials
+*.token
+*.password
+*.pass
+secrets.*
+*.env*
+.env
+.env.*
+!.env.example
+!*.env.example
+
+# -----------------------------
+# Node / Frontend (if present: React/Firebase UI)
+# -----------------------------
+node_modules/
+bower_components/
+# Next.js / Vite / CRA / Astro, etc.
+.next/
+.nuxt/
+.svelte-kit/
+out/
+.cache/
+.cache-loader/
+parcel-cache/
+.turbo/
+.vite/
+.vscode/.react/
+coverage/
+
+# Build outputs
+build/
+dist/
+
+# Lock files are intentional (keep them tracked)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# -----------------------------
+# Firebase & Cloud
+# -----------------------------
+.firebase/
+firebase-debug.log
+.storage/
+.emulator/
+# Functions (Node) local build outputs
+functions/node_modules/
+functions/lib/
+functions/.webpack/
+functions/.cache/
+
+# -----------------------------
+# PowerShell / Pester artifacts
+# -----------------------------
+# Keep .ps1, .psm1, .psd1 scripts tracked
+# Ignore common test output files
+TestResults*.xml
+CodeCoverage*.xml
+*.coveragexml
+*.clixml
+
+# -----------------------------
+# IDE / Editor metadata
+# -----------------------------
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.iml
+*.ipr
+*.iws
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+
+# -----------------------------
+# OS / Archive
+# -----------------------------
+*.7z
+*.gz
+*.zip
+*.tar
+*.tar.gz
+*.tar.bz2
+*.rar
+
+# -----------------------------
+# Misc
+# -----------------------------
+# If you generate screenshots or temp exports
+screenshots/
+captures/
+
+# If you use local notebooks for exploration
+*.ipynb_checkpoints
+.ipynb_checkpoints/
